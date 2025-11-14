@@ -1,0 +1,45 @@
+/* Pseudoclases de enlaces */
+.enlace:link {
+    color: blue;
+    text-decoration: none;
+}
+
+.enlace:visited {
+    color: purple;
+    text-decoration: line-through;
+}
+
+.enlace:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.enlace:active {
+    color: green;
+    font-weight: bold;
+}
+
+/* Pseudoclase focus */
+input:focus {
+    background-color: yellow;
+    border: 2px solid red;
+}
+
+
+
+/* Pseudoclase lang */
+p:lang(es) {
+    color: red;
+    font-style: italic;
+}
+
+p:lang(en) {
+    color: blue;
+    font-weight: bold;
+}
+
+p:lang(fr) {
+    color: green;
+    text-decoration: underline;
+}
+

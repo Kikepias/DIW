@@ -1,0 +1,39 @@
+/* Universal */
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+    text-align: left;
+}
+
+/* Etiqueta */
+
+h1 {
+    font-size: 3em;
+    color: blue;
+    text-align: center;
+}
+
+/* Descendiente */
+
+div p {
+    color: green;
+}
+
+/* Selector hijo */
+
+div > h2 {
+    color: black;
+}
+
+/* Abyacente */
+
+h1 + p {
+    color: aqua;
+}
+
+/* Hermano general */
+
+p + span {
+    color: saddlebrown
+}

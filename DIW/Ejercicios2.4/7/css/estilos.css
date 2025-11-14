@@ -1,0 +1,17 @@
+
+#letra{
+height: 1000px;
+background-color: orange;
+font-size:36 px;
+opacity: 30%;
+}
+.parallax {
+  background-image: url("/Ejercicios2.4/7/imagenes/imagendeEjemplo.png");
+
+  min-height: 500px; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

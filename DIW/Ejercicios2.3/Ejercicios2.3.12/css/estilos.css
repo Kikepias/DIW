@@ -1,0 +1,36 @@
+/* ::first-line */
+.linea-letra::first-line {
+    color: red;
+    font-weight: bold;
+}
+
+/* ::first-letter */
+.linea-letra::first-letter {
+    font-size: 2em;
+    color: blue;
+}
+
+/* ::before */
+.antes-despues::before {
+    content: "-> ";
+    color: green;
+}
+
+/* ::after */
+.antes-despues::after {
+    content: " <- ";
+    color: green;
+}
+
+
+/* ::marker */
+::marker {
+    color: purple;
+    font-size: 1.2em;
+}
+
+/* ::selection */
+.seleccion::selection {
+    background: yellow;
+    color: black;
+}

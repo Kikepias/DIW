@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 9</title>
+    <link rel="stylesheet" href="/Ejercicios2.3/Ejercicio2.3.9/css/estilos.css">
+</head>
+<body>
+    <!-- Caso 1: first-child, last-child, only-child -->
+    <div class="caso1">
+        <p>Primer hijo</p>
+        <p>Hijo medio</p>
+        <p>Último hijo</p>
+    </div>
+    <div class="caso1">
+        <p>Hijo único</p>
+    </div>
+
+    <!-- Caso 2: first-of-type, last-of-type, only-of-type -->
+    <div class="caso2">
+        <p>Primer párrafo</p>
+        <span>Span</span>
+        <p>Último párrafo</p>
+    </div>
+    <div class="caso2">
+        <p>Único párrafo</p>
+        <span>Span</span>
+    </div>
+
+    <!-- Caso 3: empty -->
+    <div class="caso3">
+        <div>Con contenido</div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Caso 4: nth-child, nth-last-child -->
+    <div class="caso4">
+        <div>Elemento 1</div>
+        <div>Elemento 2</div>
+        <div>Elemento 3</div>
+        <div>Elemento 4</div>
+        <div>Elemento 5</div>
+    </div>
+
+    <!-- Caso 5: nth-of-type, nth-last-of-type -->
+    <div class="caso5">
+        <p>Párrafo 1</p>
+        <span>Span 1</span>
+        <p>Párrafo 2</p>
+        <span>Span 2</span>
+        <p>Párrafo 3</p>
+    </div>
+
+    <!-- Caso 6: not(selector) -->
+    <div class="caso6">
+        <p class="especial">Especial</p>
+        <p>Normal</p>
+        <div>Div</div>
+    </div>
+
+    <!-- Caso 7: root -->
+    <div class="caso7">
+        <p>Fondo de :root</p>
+    </div>
+
+    <!-- Caso 8: enabled, disabled -->
+    <div class="caso8">
+        <input placeholder="Habilitado">
+        <input disabled placeholder="Deshabilitado">
+        <button>Botón normal</button>
+        <button disabled>Botón deshabilitado</button>
+    </div>
+
+    <!-- Caso 9: checked -->
+    <div class="caso9">
+        <input type="checkbox"> Opción 1
+        <input type="checkbox" checked> Opción 2
+        <input type="radio" name="r"> Radio 1
+        <input type="radio" name="r" checked> Radio 2
+    </div>
+
+</body>
+</html>

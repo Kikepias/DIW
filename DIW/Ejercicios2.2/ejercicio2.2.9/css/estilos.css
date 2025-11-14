@@ -1,0 +1,28 @@
+
+/* Método 1: Padding igual en los 4 lados */
+.ej1 {
+    padding: 20px;
+}
+
+/* Método 2: Padding con 2 valores */
+.ej2 {
+    padding: 30px 10px; 
+}
+
+/* Método 3: Padding con 3 valores */
+.ej3 {
+    padding: 15px 25px 35px; 
+}
+
+/* Método 4: Padding con 4 valores */
+.ej4 {
+    padding: 10px 40px 70px 100px; 
+}
+
+/* Método 5: Padding con propiedades individuales */
+.ej5 {
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    padding-left: 35px;
+}

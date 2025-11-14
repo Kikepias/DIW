@@ -1,0 +1,14 @@
+div {
+  color: red;
+  font-family: Verdana, Geneva, sans-serif;
+  opacity: 0.5;
+}
+
+body {
+  border: 10px solid blue;
+  color: red;
+}
+
+h1 {
+  border: inherit;
+}

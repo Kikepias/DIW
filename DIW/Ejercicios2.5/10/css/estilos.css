@@ -1,0 +1,11 @@
+.icono {
+      fill: red;       /* a) color del icono */
+      opacity: 0.5;        /* a) opacidad */
+      width: 150px;        /* b) ancho */
+      height: auto;        /* b) mantiene proporción */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 12</title>
+    <!-- Fuente 2: Externa con link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        /* Fuente 3: Externa con @import */
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+        
+        /* Fuente 1: Interna */
+        @font-face {
+            font-family: 'Lobster';
+            src: url('/Ejercicios2.4/12/fonts/Lobster-Regular.ttf');
+        }
+        
+        .fuente1 {
+            font-family: 'Lobster', cursive;
+        }
+        
+        .fuente2 {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .fuente3 {
+            font-family: 'Dancing Script', cursive;
+        }
+    </style>
+</head>
+<body>
+    <p class="fuente1">Párrafo con fuente Lobster (interna)</p>
+    <p class="fuente2">Párrafo con fuente Roboto (link)</p>
+    <p class="fuente3">Párrafo con fuente Dancing Script (@import)</p>
+</body>
+</html>

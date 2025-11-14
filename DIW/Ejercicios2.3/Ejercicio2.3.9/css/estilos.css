@@ -1,0 +1,103 @@
+/* Caso 1: first-child, last-child, only-child */
+.caso1 p:first-child {
+    background: lightblue;
+}
+
+.caso1 p:last-child {
+    background: lightcoral;
+}
+
+.caso1 p:only-child {
+    background: gold;
+}
+
+/* Caso 2: first-of-type, last-of-type, only-of-type */
+.caso2 p:first-of-type {
+    background: lightgreen;
+}
+
+.caso2 p:last-of-type {
+    background: lightpink;
+}
+
+.caso2 p:only-of-type {
+    background: plum;
+}
+
+/* Caso 3: empty */
+.caso3 div:empty {
+    background: lightgray;
+    height: 20px;
+    width: 100px;
+}
+
+/* Caso 4: nth-child, nth-last-child */
+.caso4 div:nth-child(odd) {
+    background: #f0f0f0;
+}
+
+.caso4 div:nth-child(even) {
+    background: #e0e0e0;
+}
+
+.caso4 div:nth-child(3) {
+    background: lightyellow;
+}
+
+.caso4 div:nth-last-child(2) {
+    background: lightcyan;
+}
+
+/* Caso 5: nth-of-type, nth-last-of-type */
+.caso5 p:nth-of-type(odd) {
+    background: lavender;
+}
+
+.caso5 p:nth-of-type(even) {
+    background: honeydew;
+}
+
+.caso5 p:nth-of-type(3) {
+    background: mistyrose;
+}
+
+.caso5 p:nth-last-of-type(1) {
+    background: blanchedalmond;
+}
+
+/* Caso 6: not(selector) */
+.caso6 p:not(.especial) {
+    background: azure;
+}
+
+.caso6 :not(p) {
+    background: wheat;
+}
+
+/* Caso 7: root */
+:root {
+    background: lightyellow;
+}
+
+/* Caso 8: enabled, disabled */
+.caso8 input:enabled {
+    border: 2px solid green;
+}
+
+.caso8 input:disabled {
+    background: #f5f5f5;
+}
+
+.caso8 button:enabled {
+    background: lightgreen;
+}
+
+.caso8 button:disabled {
+    background: lightcoral;
+}
+
+/* Caso 9: checked */
+.caso9 input:checked {
+    accent-color: green;
+}
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio 8</title>
+</head>
+
+<body>
+  <h1>Ejercicio 8. Formulario</h1>
+
+  <form>
+    <legend>Texto</legend>
+    <input type="text">
+
+    <br><br><br>
+
+    <legend>Text area</legend><br>
+
+    <label for="text">Text area</label><br>
+    <textarea id="text" name="text" rows="4" cols="50"
+      placeholder="Escribe un texto(Esto es un placeholder)"></textarea>
+
+
+    <br><br><br>
+
+
+
+    <legend>Select</legend><br>
+
+    <label for="select">Select:</label><br>
+    <select id="select" name="select">
+      <option value="ejemplo1">ejemplo1</option>
+      <option value="ejemplo2">ejemplo2</option>
+    </select>
+
+    <br><br><br>
+
+
+    <legend>Input type</legend><br>
+
+    <input type="checkbox" id="checked" name="checked" checked>
+    <label for="checked">Checkbox checked</label>
+    <br>
+
+    <input type="checkbox" id="disabled" name="disabled" disabled>
+    <label for="disabled">disabled</label>
+
+
+    <br><br>
+
+
+
+    <legend>Radio</legend>
+    <input type="radio" id="ejemplo1" name="ejemplo1" value="ejemplo1">
+    <label for="ejemplo1">Ejemplo</label><br>
+
+
+    <br><br><br>
+
+
+
+    <legend>File y submit</legend><br>
+
+    <label for="archivo">File</label><br>
+    <input id="archivo" name="archivo" type="file" accept=".pdf,image/*"><br>
+
+
+
+    <br><br>
+
+
+
+    <legend>Datalist</legend><br>
+    <label for="data">Datalist</label><br>
+    <input id="data" name="data" list="lists" placeholder="Selecciona una opcion">
+    <datalist id="lists">
+      <option value="Data">Data</option>
+      <option value="list">List</option>
+    </datalist>
+
+
+    <br><br><br>
+
+
+    <legend>Acciones</legend>
+
+
+    <input type="button" id="boton" value="Boton" onclick="alert('alerta al presionar el boton')">
+    <input type="submit" value="submit">
+
+  </form>
+
+
+
+</body>
+
+</html>

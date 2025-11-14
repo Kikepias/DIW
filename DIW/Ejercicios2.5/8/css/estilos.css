@@ -1,0 +1,24 @@
+.rotar {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    transition: transform 1s ease-in-out 1s, width 1s ease-in-out 1s, background-color 1s ease-in-out 1s;
+}
+
+.rotar:hover {
+    transform: rotate(360deg);
+    width: 200px;
+    background-color: red;
+}
+
+.deform {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(128, 128, 128, 0.4);
+    transition: transform 1s ease-in-out, background-color 1s ease-in-out;
+}
+
+.deform:hover {
+    transform: translate(50px, 0) skew(20deg);
+    background-color: pink;
+}

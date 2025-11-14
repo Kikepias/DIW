@@ -1,0 +1,38 @@
+/* [attr] */
+p[lang] {
+    color: purple;
+}
+
+/* [attr=value]*/
+a[href="https://www.google.com"]{
+    color:brown;
+}
+
+/* [attr~=value] */
+[title~="flower"] {
+  border: 5px solid green;
+}
+
+/* [attr|=value] */
+
+[lang|=en] {
+  background: yellow;
+}
+
+/* [attr$=value] */
+
+a[href=".org"]{
+    background: green;
+}
+
+/* [attr^=value] */
+
+div[class^="test"] {
+  background: salmon;
+}
+
+/* [attr*=value] */
+
+div[class*="segundo"] {
+  background: blue;
+}

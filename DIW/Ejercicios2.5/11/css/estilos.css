@@ -1,0 +1,3 @@
+.imagen {
+    filter: blur(3px) grayscale(100%) sepia(100%);
+}

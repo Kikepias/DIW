@@ -1,0 +1,34 @@
+/* a) Enlaces no visitados - verde sin subrayar */
+a:link {
+    color: green;
+    text-decoration: none;
+}
+
+/* b) Enlaces al pasar ratón - rojo subrayado */
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* c) Enlaces visitados - negro negrita */
+a:visited {
+    color: black;
+    font-weight: bold;
+}
+
+/* d) Elementos de listado - cursiva */
+li {
+    font-style: italic;
+}
+
+/* e) Títulos impares - negro subrayado */
+.titulo-impar {
+    color: black;
+    text-decoration: underline;
+}
+
+/* e) Títulos pares - gris sin subrayar */
+.titulo-par {
+    color: gray;
+    text-decoration: none;
+}

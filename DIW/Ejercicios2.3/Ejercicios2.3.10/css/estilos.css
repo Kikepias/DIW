@@ -1,0 +1,11 @@
+/* Campo obligatorio */
+input:required {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+/* Campo opcional */
+input:optional {
+    border: 2px solid green;
+    background-color: #f0fff0;
+}

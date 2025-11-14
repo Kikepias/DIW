@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 21</title>
+    <style>
+        .caja1 {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            z-index: 1;
+            top: 20px;
+            left: 20px;
+        }
+        
+        .caja2 {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+            z-index: 2;
+            top: 50px;
+            left: 50px;
+        }
+        
+        .caja3 {
+            visibility: hidden;
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+            margin-top: 150px;
+        }
+        
+        .caja4 {
+            width: 200px;
+            height: 100px;
+            background-color: lightyellow;
+            overflow: scroll;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="caja1">Caja 1 (z-index: 1)</div>
+    <div class="caja2">Caja 2 (z-index: 2)</div>
+    <div class="caja3">Caja 3 (visibility: hidden)</div>
+    <div class="caja4">
+        Caja 4 (overflow: scroll)
+        Texto muy largo que desborda el contenedor para demostrar la propiedad overflow................................... ...................................
+    </div>
+</body>
+</html>

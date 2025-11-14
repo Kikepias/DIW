@@ -1,0 +1,16 @@
+
+.fixed-container {
+    float: left;
+    width: 300px;
+    background-color: #3498db;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.variable-container {
+    float: left;
+    width: calc(100% - 300px);
+    background-color: #e74c3c;
+    box-sizing: border-box;
+    padding: 20px;
+}

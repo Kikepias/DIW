@@ -1,0 +1,148 @@
+/* Aplicar box-sizing: border-box a todos los elementos */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #4a465b;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+/* Header y navegación */
+header {
+  background-color: white;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Contenido principal */
+.main {
+  width: 70%;
+  float: left;
+  background-color: white;
+  color: black;
+}
+
+.imagen {
+  width: 100%;
+}
+
+.posts {
+  padding: 20px;
+}
+
+.posts article h2 {
+  color: #333;
+}
+
+.posts article p {
+  line-height: 27px;
+  color: #333;
+}
+
+/* Aside */
+aside {
+  width: 30%;
+  float: left;
+  background-color: #161f26;
+  padding: 20px;
+}
+
+.widget {
+  margin-bottom: 30px;
+}
+
+.widget .titulo {
+  color: #ff8000;
+  border-bottom: 1px solid #ff8000;
+  padding-bottom: 10px;
+}
+
+.widget ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.widget ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.widget ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.widget ul li a:hover {
+  color: #8f8f8f;
+}
+
+.widget p {
+  color: white;
+  line-height: 27px;
+}
+
+/* Footer */
+footer {
+  width: 70%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  float: left;
+  clear: both;
+}
+
+/* Media para pantallas menores a 800px */
+@media screen and (max-width: 800px) {
+  .main {
+    width: 100%;
+    float: none;
+  }
+  
+  aside {
+    width: 100%;
+    float: none;
+    margin-top: 20px;
+  }
+  
+  .contenedor {
+    width: 95%;
+  }
+  
+
+}

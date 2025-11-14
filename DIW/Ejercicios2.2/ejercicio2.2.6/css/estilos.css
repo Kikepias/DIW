@@ -1,0 +1,37 @@
+
+/* a) Los párrafos tienen que aparecer en negrita y con un tamaño de 20px en cualquier dispositivo. */
+p {
+  font-weight: 700;            
+  font-size: 20px; 
+  text-align: left;          
+  margin-bottom: 12px;
+}
+
+/* c) imágenes a la izquierda en todos los dispositivos (por defecto) */
+img {
+  margin: 0;            
+  max-width: 100%;
+  height: auto;
+}
+
+/* b) Las imágenes deben aparecer centradas sólo cuando se muestran en pantalla. */
+@media screen {
+  img {
+    display: block;      
+    margin: auto;
+ 
+  }
+
+
+}
+
+/* d) Cuando el usuario imprima la página, no se imprima el header, footer, nav, ni aside */
+@media print {
+  header,
+  footer,
+  nav,
+  aside {
+    display: none ;
+  }
+
+}
