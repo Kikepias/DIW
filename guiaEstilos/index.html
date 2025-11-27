@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Estilos - SkyVision Drones</title>
+    <link href__="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ========================================
+           RESET Y BASE
+        ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #F8FAFC;
+            color: #1E293B;
+            line-height: 1.6;
+        }
+
+        /* ========================================
+           LAYOUT
+        ======================================== */
+        .style-guide {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #0F172A, #1E293B);
+            border-radius: 30px;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            color: #94A3B8;
+        }
+
+        .header .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            color: #0EA5E9;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #E2E8F0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        section h2::before {
+            content: '';
+            width: 6px;
+            height: 28px;
+            background: linear-gradient(135deg, #0EA5E9, #0284C7);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1E293B;
+            margin: 24px 0 16px;
+        }
+
+        /* ========================================
+           1. COLORES
+        ======================================== */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .color-card {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .color-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .color-swatch {
+            height: 100px;
+            display: flex;
+            align-items: flex-end;
+            padding: 12px;
+        }
+
+        .color-info {
+            padding: 16px;
+            background: white;
+        }
+
+        .color-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .color-hex {
+            font-family: monospace;
+            font-size: 0.875rem;
+            color: #64748B;
+        }
+
+        /* Colores específicos */
+        .sky-blue { background: #0EA5E9; }
+        .sky-blue-dark { background: #0284C7; }
+        .midnight { background: #0F172A; }
+        .slate-800 { background: #1E293B; }
+        .slate-500 { background: #64748B; }
+        .slate-400 { background: #94A3B8; }
+        .slate-200 { background: #E2E8F0; }
+        .slate-100 { background: #F8FAFC; border: 1px solid #E2E8F0; }
+        .white { background: #FFFFFF; border: 1px solid #E2E8F0; }
+        .amber { background: #F59E0B; }
+
+        /* ========================================
+           2. TIPOGRAFÍA
+        ======================================== */
+        .type-sample {
+            padding: 24px;
+            background: #F8FAFC;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
+
+        .type-h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #0F172A;
+        }
+
+        .type-h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0F172A;
+        }
+
+        .type-h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #1E293B;
+        }
+
+        .type-h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #1E293B;
+        }
+
+        .type-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.4;
+            color: #64748B;
+        }
+
+        .type-body {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #64748B;
+        }
+
+        .type-small {
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #94A3B8;
+        }
+
+        .type-label {
+            font-size: 0.75rem;
+            color: #94A3B8;
+            margin-top: 8px;
+            font-family: monospace;
+        }
+
+        /* ========================================
+           3. ESPACIADO
+        ======================================== */
+        .spacing-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .spacing-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 20px;
+            background: #F8FAFC;
+            border-radius: 12px;
+            min-width: 180px;
+        }
+
+        .spacing-box {
+            background: linear-gradient(135deg, #0EA5E9, #0284C7);
+            border-radius: 4px;
+        }
+
+        .spacing-label {
+            font-weight: 500;
+        }
+
+        .spacing-value {
+            font-family: monospace;
+            font-size: 0.875rem;
+            color: #64748B;
+        }
+
+        /* ========================================
+           4. BORDES Y RADIOS
+        ======================================== */
+        .radius-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            align-items: flex-end;
+        }
+
+        .radius-item {
+            text-align: center;
+        }
+
+        .radius-box {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #0EA5E9, #0284C7);
+            margin-bottom: 12px;
+        }
+
+        .radius-sm { border-radius: 8px; }
+        .radius-md { border-radius: 12px; }
+        .radius-lg { border-radius: 15px; }
+        .radius-xl { border-radius: 20px; }
+        .radius-2xl { border-radius: 30px; }
+        .radius-full { border-radius: 50%; }
+
+        /* ========================================
+           5. SOMBRAS
+        ======================================== */
+        .shadow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .shadow-item {
+            padding: 32px;
+            background: white;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .shadow-soft {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .shadow-medium {
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
+        }
+
+        .shadow-large {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .shadow-hover {
+            box-shadow: 0 10px 40px rgba(14, 165, 233, 0.2);
+        }
+
+        .shadow-focus {
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+            border: 2px solid #0EA5E9;
+        }
+
+        /* ========================================
+           6. GRADIENTES
+        ======================================== */
+        .gradient-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .gradient-item {
+            height: 120px;
+            border-radius: 16px;
+            display: flex;
+            align-items: flex-end;
+            padding: 16px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, #0EA5E9, #0284C7);
+        }
+
+        .gradient-light {
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            color: #64748B;
+        }
+
+        .gradient-highlight {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(2, 132, 199, 0.2));
+            color: #0EA5E9;
+            border: 2px solid #0EA5E9;
+        }
+
+        /* ========================================
+           7. ICONOS
+        ======================================== */
+        .icon-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .icon-item {
+            text-align: center;
+        }
+
+        .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #F8FAFC;
+            border-radius: 12px;
+            margin-bottom: 8px;
+        }
+
+        .icon-box svg {
+            color: #0EA5E9;
+        }
+
+        .icon-xs { width: 32px; height: 32px; }
+        .icon-sm { width: 40px; height: 40px; }
+        .icon-md { width: 48px; height: 48px; }
+        .icon-lg { width: 56px; height: 56px; }
+        .icon-xl { width: 64px; height: 64px; }
+
+        .icon-feature {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0EA5E9, #0284C7);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        /* ========================================
+           8. BOTONES
+        ======================================== */
+        .button-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #0EA5E9, #0284C7);
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(14, 165, 233, 0.5);
+        }
+
+        .btn-secondary {
+            padding: 12px 24px;
+            background: transparent;
+            color: #0EA5E9;
+            font-size: 1rem;
+            border: 2px solid #0EA5E9;
+            border-radius: 12px;
+        }
+
+        .btn-secondary:hover {
+            background: #0EA5E9;
+            color: white;
+        }
+
+        .btn-small {
+            padding: 8px 16px;
+            background: #0EA5E9;
+            color: white;
+            font-size: 0.875rem;
+            border-radius: 8px;
+        }
+
+        /* ========================================
+           9. TARJETAS
+        ======================================== */
+        .card-demo {
+            max-width: 400px;
+            background: white;
+            padding: 32px;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .card-demo:hover {
+            transform: translateY(-5px);
+            border-color: #0EA5E9;
+            box-shadow: 0 10px 40px rgba(14, 165, 233, 0.2);
+        }
+
+        .card-demo .icon-feature {
+            margin-bottom: 16px;
+        }
+
+        .card-demo h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1E293B;
+            margin-bottom: 12px;
+        }
+
+        .card-demo p {
+            color: #64748B;
+            line-height: 1.6;
+        }
+
+        /* ========================================
+           10. INPUTS
+        ======================================== */
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            color: #1E293B;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .input-demo {
+            padding: 14px 20px;
+            font-size: 1rem;
+            font-family: inherit;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
+            background: white;
+            color: #1E293B;
+            transition: all 0.3s ease;
+        }
+
+        .input-demo:hover {
+            border-color: #94A3B8;
+        }
+
+        .input-demo:focus {
+            outline: none;
+            border-color: #0EA5E9;
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+        }
+
+        .input-demo::placeholder {
+            color: #94A3B8;
+            opacity: 0.7;
+        }
+
+        select.input-demo {
+            cursor: pointer;
+        }
+
+        textarea.input-demo {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* ========================================
+           11. BADGES
+        ======================================== */
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: 50px;
+        }
+
+        .badge-dark {
+            background: rgba(15, 23, 42, 0.9);
+            color: white;
+        }
+
+        .badge-primary {
+            background: #0EA5E9;
+            color: white;
+        }
+
+        .badge-amber {
+            background: #F59E0B;
+            color: white;
+        }
+
+        .badge-outline {
+            background: transparent;
+            color: #0EA5E9;
+            border: 2px solid #0EA5E9;
+        }
+
+        /* ========================================
+           12. NAVEGACIÓN
+        ======================================== */
+        .nav-demo {
+            display: flex;
+            gap: 32px;
+            padding: 20px;
+            background: #0F172A;
+            border-radius: 12px;
+        }
+
+        .nav-link {
+            color: #94A3B8;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+            padding-bottom: 5px;
+        }
+
+        .nav-link:hover {
+            color: #0EA5E9;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #0EA5E9;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* ========================================
+           13. ANIMACIONES
+        ======================================== */
+        .animation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .animation-item {
+            padding: 32px;
+            background: #F8FAFC;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .animation-box {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0EA5E9, #0284C7);
+            border-radius: 12px;
+            margin: 0 auto 16px;
+            transition: all 0.3s ease;
+        }
+
+        .animation-item:hover .anim-elevate {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(14, 165, 233, 0.4);
+        }
+
+        .animation-item:hover .anim-scale {
+            transform: scale(1.15);
+        }
+
+        .animation-item:hover .anim-rotate {
+            transform: rotate(15deg);
+        }
+
+        .anim-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        /* ========================================
+           14. CÓDIGO CSS
+        ======================================== */
+        .code-block {
+            background: #0F172A;
+            color: #E2E8F0;
+            padding: 24px;
+            border-radius: 12px;
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+            margin-top: 16px;
+        }
+
+        .code-block .comment {
+            color: #64748B;
+        }
+
+        .code-block .property {
+            color: #0EA5E9;
+        }
+
+        .code-block .value {
+            color: #F59E0B;
+        }
+
+        .code-block .selector {
+            color: #22D3EE;
+        }
+
+        /* ========================================
+           RESPONSIVE
+        ======================================== */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .type-h1 {
+                font-size: 2.5rem;
+            }
+
+            .type-h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 24px;
+            }
+
+            .color-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="style-guide">
+        
+        <!-- HEADER -->
+        <header class="header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+                    <circle cx="12" cy="13" r="3"/>
+                </svg>
+                SkyVision Drones
+            </div>
+            <h1>Guía de Estilos</h1>
+            <p>Sistema de diseño para la página web de servicios de drones</p>
+        </header>
+
+        <!-- 1. COLORES -->
+        <section id="colores">
+            <h2>1. Paleta de Colores</h2>
+            
+            <h3>Colores Primarios</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch sky-blue"></div>
+                    <div class="color-info">
+                        <div class="color-name">Sky Blue</div>
+                        <div class="color-hex">#0EA5E9</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch sky-blue-dark"></div>
+                    <div class="color-info">
+                        <div class="color-name">Sky Blue Dark</div>
+                        <div class="color-hex">#0284C7</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Colores Neutros Oscuros</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch midnight"></div>
+                    <div class="color-info">
+                        <div class="color-name">Midnight</div>
+                        <div class="color-hex">#0F172A</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch slate-800"></div>
+                    <div class="color-info">
+                        <div class="color-name">Slate 800</div>
+                        <div class="color-hex">#1E293B</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch slate-500"></div>
+                    <div class="color-info">
+                        <div class="color-name">Slate 500</div>
+                        <div class="color-hex">#64748B</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch slate-400"></div>
+                    <div class="color-info">
+                        <div class="color-name">Slate 400</div>
+                        <div class="color-hex">#94A3B8</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Colores Neutros Claros</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch slate-200"></div>
+                    <div class="color-info">
+                        <div class="color-name">Slate 200</div>
+                        <div class="color-hex">#E2E8F0</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch slate-100"></div>
+                    <div class="color-info">
+                        <div class="color-name">Slate 100</div>
+                        <div class="color-hex">#F8FAFC</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch white"></div>
+                    <div class="color-info">
+                        <div class="color-name">Blanco</div>
+                        <div class="color-hex">#FFFFFF</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Color de Acento</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch amber"></div>
+                    <div class="color-info">
+                        <div class="color-name">Amber 500</div>
+                        <div class="color-hex">#F59E0B</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. TIPOGRAFÍA -->
+        <section id="tipografia">
+            <h2>2. Tipografía</h2>
+            
+            <p style="margin-bottom: 24px; color: #64748B;">
+                <strong>Familia:</strong> 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif
+            </p>
+
+            <div class="type-sample">
+                <div class="type-h1">Título Principal H1</div>
+                <div class="type-label">4rem / 800 / line-height: 1.1</div>
+            </div>
+
+            <div class="type-sample">
+                <div class="type-h2">Título Sección H2</div>
+                <div class="type-label">3rem / 800 / line-height: 1.2</div>
+            </div>
+
+            <div class="type-sample">
+                <div class="type-h3">Título Tarjeta H3</div>
+                <div class="type-label">1.5rem / 700 / line-height: 1.3</div>
+            </div>
+
+            <div class="type-sample">
+                <div class="type-h4">Título Subsección H4</div>
+                <div class="type-label">1.25rem / 600 / line-height: 1.4</div>
+            </div>
+
+            <div class="type-sample">
+                <div class="type-subtitle">Subtítulo descriptivo</div>
+                <div class="type-label">1.5rem / 300 / line-height: 1.4</div>
+            </div>
+
+            <div class="type-sample">
+                <div class="type-body">Texto de párrafo normal para descripciones y contenido general de la página web.</div>
+                <div class="type-label">1rem / 400 / line-height: 1.6</div>
+            </div>
+
+            <div class="type-sample">
+                <div class="type-small">Texto pequeño para notas y etiquetas secundarias</div>
+                <div class="type-label">0.875rem / 400 / line-height: 1.5</div>
+            </div>
+        </section>
+
+        <!-- 3. ESPACIADO -->
+        <section id="espaciado">
+            <h2>3. Sistema de Espaciado</h2>
+            <p style="margin-bottom: 24px; color: #64748B;">Base de 8px con escala progresiva</p>
+
+            <div class="spacing-grid">
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 4px; height: 24px;"></div>
+                    <div>
+                        <div class="spacing-label">space-1</div>
+                        <div class="spacing-value">4px</div>
+                    </div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 8px; height: 24px;"></div>
+                    <div>
+                        <div class="spacing-label">space-2</div>
+                        <div class="spacing-value">8px</div>
+                    </div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 16px; height: 24px;"></div>
+                    <div>
+                        <div class="spacing-label">space-4</div>
+                        <div class="spacing-value">16px</div>
+                    </div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 24px; height: 24px;"></div>
+                    <div>
+                        <div class="spacing-label">space-6</div>
+                        <div class="spacing-value">24px</div>
+                    </div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 32px; height: 24px;"></div>
+                    <div>
+                        <div class="spacing-label">space-8</div>
+                        <div class="spacing-value">32px</div>
+                    </div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 48px; height: 24px;"></div>
+                    <div>
+                        <div class="spacing-label">space-12</div>
+                        <div class="spacing-value">48px</div>
+                    </div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 64px; height: 24px;"></div>
+                    <div>
+                        <div class="spacing-label">space-16</div>
+                        <div class="spacing-value">64px</div>
+                    </div>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 96px; height: 24px;"></div>
+                    <div>
+                        <div class="spacing-label">space-24</div>
+                        <div class="spacing-value">96px</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. BORDES Y RADIOS -->
+        <section id="bordes">
+            <h2>4. Border Radius</h2>
+
+            <div class="radius-grid">
+                <div class="radius-item">
+                    <div class="radius-box radius-sm"></div>
+                    <div class="spacing-label">radius-sm</div>
+                    <div class="spacing-value">8px</div>
+                </div>
+                <div class="radius-item">
+                    <div class="radius-box radius-md"></div>
+                    <div class="spacing-label">radius-md</div>
+                    <div class="spacing-value">12px</div>
+                </div>
+                <div class="radius-item">
+                    <div class="radius-box radius-lg"></div>
+                    <div class="spacing-label">radius-lg</div>
+                    <div class="spacing-value">15px</div>
+                </div>
+                <div class="radius-item">
+                    <div class="radius-box radius-xl"></div>
+                    <div class="spacing-label">radius-xl</div>
+                    <div class="spacing-value">20px</div>
+                </div>
+                <div class="radius-item">
+                    <div class="radius-box radius-2xl"></div>
+                    <div class="spacing-label">radius-2xl</div>
+                    <div class="spacing-value">30px</div>
+                </div>
+                <div class="radius-item">
+                    <div class="radius-box radius-full"></div>
+                    <div class="spacing-label">radius-full</div>
+                    <div class="spacing-value">50%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SOMBRAS -->
+        <section id="sombras">
+            <h2>5. Sombras</h2>
+
+            <div class="shadow-grid">
+                <div class="shadow-item shadow-soft">
+                    <div class="spacing-label">Sombra Suave</div>
+                    <div class="type-small" style="margin-top: 8px;">0 4px 20px rgba(0,0,0,0.08)</div>
+                </div>
+                <div class="shadow-item shadow-medium">
+                    <div class="spacing-label">Sombra Media</div>
+                    <div class="type-small" style="margin-top: 8px;">0 10px 30px rgba(14,165,233,0.3)</div>
+                </div>
+                <div class="shadow-item shadow-large">
+                    <div class="spacing-label">Sombra Grande</div>
+                    <div class="type-small" style="margin-top: 8px;">0 20px 60px rgba(0,0,0,0.2)</div>
+                </div>
+                <div class="shadow-item shadow-hover">
+                    <div class="spacing-label">Sombra Hover</div>
+                    <div class="type-small" style="margin-top: 8px;">0 10px 40px rgba(14,165,233,0.2)</div>
+                </div>
+                <div class="shadow-item shadow-focus">
+                    <div class="spacing-label">Sombra Focus</div>
+                    <div class="type-small" style="margin-top: 8px;">0 0 0 3px rgba(14,165,233,0.1)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. GRADIENTES -->
+        <section id="gradientes">
+            <h2>6. Gradientes</h2>
+
+            <div class="gradient-grid">
+                <div class="gradient-item gradient-primary">
+                    <div>
+                        <div>Gradiente Primario</div>
+                        <div class="type-small" style="color: rgba(255,255,255,0.8);">135deg, #0EA5E9 → #0284C7</div>
+                    </div>
+                </div>
+                <div class="gradient-item gradient-light">
+                    <div>
+                        <div>Gradiente Claro</div>
+                        <div class="type-small">135deg, #F8FAFC → #E2E8F0</div>
+                    </div>
+                </div>
+                <div class="gradient-item gradient-highlight">
+                    <div>
+                        <div>Gradiente Destacado</div>
+                        <div class="type-small">Con transparencia + borde</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. BOTONES -->
+        <section id="botones">
+            <h2>7. Botones</h2>
+
+            <div class="button-grid">
+                <button class="btn btn-primary">Botón Primario</button>
+                <button class="btn btn-secondary">Botón Secundario</button>
+                <button class="btn btn-small">Botón Pequeño</button>
+            </div>
+
+            <div class="code-block" style="margin-top: 32px;">
+<span class="selector">.btn-primary</span> {
+    <span class="property">padding</span>: <span class="value">16px 40px</span>;
+    <span class="property">background</span>: <span class="value">linear-gradient(135deg, #0EA5E9, #0284C7)</span>;
+    <span class="property">color</span>: <span class="value">white</span>;
+    <span class="property">border-radius</span>: <span class="value">50px</span>;
+    <span class="property">box-shadow</span>: <span class="value">0 10px 30px rgba(14, 165, 233, 0.3)</span>;
+}
+            </div>
+        </section>
+
+        <!-- 8. TARJETAS -->
+        <section id="tarjetas">
+            <h2>8. Tarjetas</h2>
+            <p style="margin-bottom: 24px; color: #64748B;">Pasa el cursor sobre la tarjeta para ver el efecto hover</p>
+
+            <div class="card-demo">
+                <div class="icon-feature">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="23 7 16 12 23 17 23 7"/>
+                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                    </svg>
+                </div>
+                <h4>Grabación Cinematográfica</h4>
+                <p>Producción de videos aéreos en 4K y 6K para cine, publicidad y documentales profesionales.</p>
+            </div>
+        </section>
+
+        <!-- 9. INPUTS -->
+        <section id="inputs">
+            <h2>9. Campos de Formulario</h2>
+
+            <div class="input-grid">
+                <div class="input-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" class="input-demo" placeholder="Juan Pérez">
+                </div>
+                <div class="input-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" class="input-demo" placeholder="juan@ejemplo.com">
+                </div>
+                <div class="input-group">
+                    <label>Servicio Requerido</label>
+                    <select class="input-demo">
+                        <option>Selecciona un servicio</option>
+                        <option>Grabación de Video</option>
+                        <option>Fotografía Aérea</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Fecha Deseada</label>
+                    <input type="date" class="input-demo">
+                </div>
+            </div>
+
+            <div class="input-group" style="margin-top: 24px; max-width: 600px;">
+                <label>Mensaje</label>
+                <textarea class="input-demo" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+            </div>
+        </section>
+
+        <!-- 10. BADGES -->
+        <section id="badges">
+            <h2>10. Badges</h2>
+
+            <div class="badge-grid">
+                <span class="badge badge-dark">Equipos DJI Profesionales</span>
+                <span class="badge badge-primary">Nuevo</span>
+                <span class="badge badge-amber">$599</span>
+                <span class="badge badge-outline">En Progreso</span>
+            </div>
+        </section>
+
+        <!-- 11. NAVEGACIÓN -->
+        <section id="navegacion">
+            <h2>11. Enlaces de Navegación</h2>
+            <p style="margin-bottom: 24px; color: #64748B;">Pasa el cursor sobre los enlaces para ver el efecto</p>
+
+            <nav class="nav-demo">
+                <a href__="#" class="nav-link">Inicio</a>
+                <a href__="#" class="nav-link">Servicios</a>
+                <a href__="#" class="nav-link">Precios</a>
+                <a href__="#" class="nav-link">Contacto</a>
+            </nav>
+        </section>
+
+        <!-- 12. ANIMACIONES -->
+        <section id="animaciones">
+            <h2>12. Animaciones</h2>
+            <p style="margin-bottom: 24px; color: #64748B;">Pasa el cursor sobre cada elemento para activar la animación</p>
+
+            <div class="animation-grid">
+                <div class="animation-item">
+                    <div class="animation-box anim-elevate"></div>
+                    <div class="spacing-label">Elevación</div>
+                    <div class="type-small">translateY(-10px)</div>
+                </div>
+                <div class="animation-item">
+                    <div class="animation-box anim-scale"></div>
+                    <div class="spacing-label">Escala</div>
+                    <div class="type-small">scale(1.15)</div>
+                </div>
+                <div class="animation-item">
+                    <div class="animation-box anim-rotate"></div>
+                    <div class="spacing-label">Rotación</div>
+                    <div class="type-small">rotate(15deg)</div>
+                </div>
+                <div class="animation-item">
+                    <div class="animation-box anim-pulse"></div>
+                    <div class="spacing-label">Pulso</div>
+                    <div class="type-small">Animación continua</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. RESPONSIVE -->
+        <section id="responsive">
+            <h2>13. Breakpoints Responsive</h2>
+
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; margin-top: 16px;">
+                    <thead>
+                        <tr style="background: #F8FAFC;">
+                            <th style="padding: 16px; text-align: left; border-bottom: 2px solid #E2E8F0;">Breakpoint</th>
+                            <th style="padding: 16px; text-align: left; border-bottom: 2px solid #E2E8F0;">Valor</th>
+                            <th style="padding: 16px; text-align: left; border-bottom: 2px solid #E2E8F0;">Dispositivo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #E2E8F0;"><span class="badge badge-primary">Mobile</span></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #E2E8F0; font-family: monospace;">> 640px</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #E2E8F0;">Teléfonos móviles</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #E2E8F0;"><span class="badge badge-primary">Tablet</span></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #E2E8F0; font-family: monospace;">640px - 968px</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #E2E8F0;">Tablets</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px;"><span class="badge badge-primary">Desktop</span></td>
+                            <td style="padding: 16px; font-family: monospace;">> 968px</td>
+                            <td style="padding: 16px;">Ordenadores</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="code-block" style="margin-top: 24px;">
+<span class="comment">/* Media Query Principal */</span>
+<span class="selector">@media (max-width: 968px)</span> {
+    <span class="selector">.hero-title</span> { <span class="property">font-size</span>: <span class="value">2.5rem</span>; }
+    <span class="selector">.grid-2-cols</span> { <span class="property">grid-template-columns</span>: <span class="value">1fr</span>; }
+    <span class="selector">.main-nav</span> { <span class="property">display</span>: <span class="value">none</span>; }
+}
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer style="text-align: center; padding: 40px; color: #64748B;">
+            <p>Guía de Estilos - SkyVision Drones © 2024</p>
+        </footer>
+
+    </div>
+</body>
+</html>
