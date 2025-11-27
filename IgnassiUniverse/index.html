@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgnassiUniverse - Blog de Cine</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="20" fill="#00d4ff" opacity="0.2"/>
+                <circle cx="25" cy="25" r="15" fill="none" stroke="#00d4ff" stroke-width="2"/>
+                <path d="M15 25 L25 15 L35 25 L25 35 Z" fill="#00d4ff"/>
+                <circle cx="25" cy="25" r="3" fill="#0f0f23"/>
+            </svg>
+            <h1>IgnassiUniverse</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" id="movie-search" placeholder="Buscar película...">
+            <select id="genre-search">
+                <option value="">Todos los géneros</option>
+            </select>
+            <button id="search-btn">Buscar</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="featured-reviews">
+            <h2>Reseñas Destacadas</h2>
+            <div class="reviews-grid">
+                <div class="review" data-title="Inception" data-genre="Ciencia Ficción" data-director="Christopher Nolan" data-duration="148 min" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg'); background-size: cover; background-position: center;">
+                    <a href="reviews/inception.html"><h3>Inception</h3></a>
+                    <p class="genre">Género: Ciencia Ficción</p>
+                    <p>Director: Christopher Nolan | Duración: 148 min<br>Una obra maestra de Christopher Nolan que explora los sueños y la realidad. Un ladrón de sueños debe implantar una idea en la mente de un hombre de negocios.</p>
+                    <div class="tiktok-embed">
+                        <iframe src="https://www.tiktok.com/embed/@example/video/123456789" width="325" height="575" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="review" data-title="The Matrix" data-genre="Ciencia Ficción" data-director="Lana Wachowski, Lilly Wachowski" data-duration="136 min" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg'); background-size: cover; background-position: center;">
+                    <a href="reviews/the-matrix.html"><h3>The Matrix</h3></a>
+                    <p class="genre">Género: Ciencia Ficción</p>
+                    <p>Director: Lana Wachowski, Lilly Wachowski | Duración: 136 min<br>Un hacker descubre la verdad sobre su realidad simulada. Acción intensa y filosofía profunda en esta trilogía icónica.</p>
+                    <div class="tiktok-embed">
+                        <iframe src="https://www.tiktok.com/embed/@example/video/987654321" width="325" height="575" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="review" data-title="Interstellar" data-genre="Ciencia Ficción" data-director="Christopher Nolan" data-duration="169 min" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg'); background-size: cover; background-position: center;">
+                    <a href="reviews/interstellar.html"><h3>Interstellar</h3></a>
+                    <p class="genre">Género: Ciencia Ficción</p>
+                    <p>Director: Christopher Nolan | Duración: 169 min<br>Un viaje épico a través del espacio y el tiempo para salvar a la humanidad. Nolan vuelve a impresionar con ciencia y emoción.</p>
+                    <div class="tiktok-embed">
+                        <iframe src="https://www.tiktok.com/embed/@example/video/112233445" width="325" height="575" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="all-reviews">
+            <h2>Todas las Reseñas</h2>
+            <ul class="reviews-list">
+                <li class="review" data-title="Inception" data-genre="Ciencia Ficción" data-director="Christopher Nolan" data-duration="148 min" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg'); background-size: cover; background-position: center;">
+                    <a href="reviews/inception.html"><h3>Inception</h3></a>
+                    <p class="genre">Género: Ciencia Ficción</p>
+                    <p>Director: Christopher Nolan | Duración: 148 min<br>Una obra maestra de Christopher Nolan que explora los sueños y la realidad. Un ladrón de sueños debe implantar una idea en la mente de un hombre de negocios.</p>
+                </li>
+                <li class="review" data-title="The Matrix" data-genre="Ciencia Ficción" data-director="Lana Wachowski, Lilly Wachowski" data-duration="136 min" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg'); background-size: cover; background-position: center;">
+                    <a href="reviews/the-matrix.html"><h3>The Matrix</h3></a>
+                    <p class="genre">Género: Ciencia Ficción</p>
+                    <p>Director: Lana Wachowski, Lilly Wachowski | Duración: 136 min<br>Un hacker descubre la verdad sobre su realidad simulada. Acción intensa y filosofía profunda en esta trilogía icónica.</p>
+                </li>
+                <li class="review" data-title="Interstellar" data-genre="Ciencia Ficción" data-director="Christopher Nolan" data-duration="169 min" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg'); background-size: cover; background-position: center;">
+                    <a href="reviews/interstellar.html"><h3>Interstellar</h3></a>
+                    <p class="genre">Género: Ciencia Ficción</p>
+                    <p>Director: Christopher Nolan | Duración: 169 min<br>Un viaje épico a través del espacio y el tiempo para salvar a la humanidad. Nolan vuelve a impresionar con ciencia y emoción.</p>
+                </li>
+                <li class="review" data-title="The Dark Knight" data-genre="Acción" data-director="Christopher Nolan" data-duration="152 min" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg'); background-size: cover; background-position: center;">
+                    <a href="reviews/the-dark-knight.html"><h3>The Dark Knight</h3></a>
+                    <p class="genre">Género: Acción</p>
+                    <p>Director: Christopher Nolan | Duración: 152 min<br>Batman enfrenta al Joker en una batalla por el alma de Gotham. Heath Ledger brilla en este clásico del cine de superhéroes.</p>
+                </li>
+                <li class="review" data-title="Pulp Fiction" data-genre="Crimen" data-director="Quentin Tarantino" data-duration="154 min" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg'); background-size: cover; background-position: center;">
+                    <a href="reviews/pulp-fiction.html"><h3>Pulp Fiction</h3></a>
+                    <p class="genre">Género: Crimen | Director: Quentin Tarantino | Duración: 154 min</p>
+                    <p>La obra maestra de Tarantino con historias entrelazadas de crimen, violencia y redención. Un clásico moderno.</p>
+                </li>
+                <li class="review" data-title="Parasite" data-genre="Thriller" data-director="Bong Joon-ho" data-duration="132 min" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg'); background-size: cover; background-position: center;">
+                    <a href="reviews/parasite.html"><h3>Parasite</h3></a>
+                    <p class="genre">Género: Thriller | Director: Bong Joon-ho | Duración: 132 min</p>
+                    <p>Una familia pobre se infiltra en la vida de una rica. Bong Joon-ho mezcla comedia, suspense y crítica social.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="tops">
+            <h2>Tops en TikTok</h2>
+            <div class="tops-grid">
+                <div class="top-item">
+                    <h3>Top 10 Películas de Ciencia Ficción</h3>
+                    <a href="https://www.tiktok.com/@example/video/123456789" target="_blank">Ver en TikTok</a>
+                </div>
+                <div class="top-item">
+                    <h3>Mejores Villanos del Cine</h3>
+                    <a href="https://www.tiktok.com/@example/video/987654321" target="_blank">Ver en TikTok</a>
+                </div>
+                <div class="top-item">
+                    <h3>Películas que Cambiaron el Mundo</h3>
+                    <a href="https://www.tiktok.com/@example/video/112233445" target="_blank">Ver en TikTok</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="20" fill="#00d4ff" opacity="0.2"/>
+                        <circle cx="25" cy="25" r="15" fill="none" stroke="#00d4ff" stroke-width="2"/>
+                        <path d="M15 25 L25 15 L35 25 L25 35 Z" fill="#00d4ff"/>
+                        <circle cx="25" cy="25" r="3" fill="#0f0f23"/>
+                    </svg>
+                    <h2>IgnassiUniverse</h2>
+                </div>
+                <p>Tu universo cinematográfico favorito</p>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#featured-reviews">Reseñas Destacadas</a></li>
+                    <li><a href="#all-reviews">Todas las Reseñas</a></li>
+                    <li><a href="#tops">Tops en TikTok</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/ignassiuniverse" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@ignassiuniverse" target="_blank" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@ignassiuniverse" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.twitter.com/ignassiuniverse" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.facebook.com/ignassiuniverse" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 IgnassiUniverse. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
